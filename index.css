@@ -1,25 +1,25 @@
-body {
+/* body {
     padding: 0% 0%;
-}
+} */
 
-/* .top-div{
+.top-div{
     
     width: 60%;
     margin: auto;
     margin-bottom: 100px;
     padding: 20px;
     display: flex;
-} */
+}
 
 .images-container{
     float: left;
     /* flex-basis: 70%; */
-    /* margin: 20px 50px 10px 20px; */
+    margin: 20px 50px 10px 20px;
 }
 
-.product-detials{
+/* .product-detials{
     
-}
+} */
 
 .display-img{
     width: 27vw;
