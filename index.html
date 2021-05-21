@@ -1,44 +1,35 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-    <meta charset="utf-8">
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-    <title>Product Page</title>
-
-    <link rel="stylesheet" href="index.css">
-    
-    <!-- Font Awesome Icon Library -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-
+    <link rel="stylesheet" href="./styles.css">
+    <title>Upholstered Sofa</title>
 </head>
 
-
 <body>
-    <div style="background: snow;">
-    <div class="top-div">
-        <div class='images-container'>
-            <div>
-                <img id='img' class='display-img' src='images/img1.jpg'>
-            </div>
-            <div class="indicators">
-                <img class='indicator-item' src='images/img1.jpg'>
-                <img class='indicator-item' src='images/img2.jpg'>
-                <img class='indicator-item' src='images/img3.jpg'>
-                <img class='indicator-item' src='images/img4.jpg'>
-                <img class='indicator-item' src='images/img5.jpg'>
+    <div class="row1">
+        <div class="left">
+            <img src="images/img1.jpg">
+            <div class="indicator">
+                <img src="images/img1.jpg">
+                <img src="images/img2.jpg">
+                <img src="images/img3.jpg">
+                <img src="images/img4.jpg">
+                <img src="images/img5.jpg">
             </div>
         </div>
-        
-        <div class="product-details">
-            <h1 style="padding-top: 40px;">Upholstered Sofa</h1>
-            <p>Kyara Upholstered Standard Bed by Zipcode Design</p>
-            <p>
-                Anchor your living room in sophisticated style and impeccable comfort with a single addition. 
-                Perfectly balancing wood accents with fabric upholstery.
-            </p>
+        <div class="right">
+            <h1>Upholstered Sofa</h1>
+
+            <h3>Kyara Upholstered Standard Bed by Zipcode Design</h3>
+
+            <p>Anchor your living room in sophisticated style and impeccable comfort with a single addition. Perfectly
+                balancing wood accents with fabric upholstery.</p>
 
             <div>
                 <span class="fa fa-star checked"></span>
@@ -48,44 +39,48 @@
                 <span class="fa fa-star checked"></span>
             </div>
 
-            <p><span style="color: green;">(5.0)</span> review based on 250</p>
+            <p><span id="rating">(5.0)</span> review based on 250</p>
 
-            <p class="review-link">Submit Review</p>
-            
+            <a href="">Submit Review</a>
+
             <h2>$567</h2>
 
-            <p><span class="far fa-clock"></span>Dispatched in 7 working days</p>
+            <div class="dispatch">
+                <p><span class="far fa-clock"></span> Dispatched in 7 working days</p>
 
-            <button>ADD TO CART</button>
-            <button>ADD TO WISHLIST</button>
-        
-        </div>
-    </div>
-    </div>
-
-    <div class="bottom-div">
-        <div class="flex-item">
-            <span class="fas fa-key"></span>
-            <p>Secure payment</p>
-            <p>Don't worry your money is in secure places</p>
-        </div>
-
-        <div class="flex-item">
-            <span class="fas fa-truck"></span>
-            <p>Fast & free delivery</p>
-            <p>Home delivery $15. For free delivery order over $250</p>
-        </div>
-
-        <div class="flex-item">
-            <span class="fas fa-undo-alt"></span>
-            <p>Return policy</p>
-            <p>No hassle return policy</p>
+                <button type="button" id="cart">ADD TO CART</button>
+                <button type="button" id="wishlist">ADD TO WISHLIST</button>
+            </div>
         </div>
     </div>
 
+    <div class="row2">
+        <div class="service">
+            <h3><span class="fas fa-key service-icon"></span>Secure payment</h3>
+            <p class="service-text">Don't worry your money is in secure places</p>
+        </div>
 
-    <script src="https://kit.fontawesome.com/382cd46ed5.js" crossorigin="anonymous"></script>
+        <div class="service">
+            <h3><span class="fas fa-truck service-icon"></span>Fast & free delivery</h3>
+            <p class="service-text">Home delivery $15. For free delivery order over $250</p>
+        </div>
+
+        <div class="service">
+            <h3><span class="fas fa-undo-alt service-icon"></span>Return policy</h3>
+            <p class="service-text">No hassle return policy</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/f7de978a7e.js" crossorigin="anonymous"></script>
+
+    <script>
+    </script>
 </body>
-
 
 </html>
