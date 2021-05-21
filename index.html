@@ -5,7 +5,7 @@
     <!-- Required meta tags always come first -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  
 
     <link rel="stylesheet" href="./styles.css">
     <title>Upholstered Sofa</title>
@@ -14,21 +14,21 @@
 <body>
     <div class="row1">
         <div class="left">
-            <img src="images/img1.jpg">
+            <img id="display-img" src="images/img1.jpg">
             <div class="indicator">
-                <img src="images/img1.jpg">
-                <img src="images/img2.jpg">
-                <img src="images/img3.jpg">
-                <img src="images/img4.jpg">
-                <img src="images/img5.jpg">
+                <img src="images/img1.jpg" onclick="handleImage(this)">
+                <img src="images/img2.jpg" onclick="handleImage(this)">
+                <img src="images/img3.jpg" onclick="handleImage(this)">
+                <img src="images/img4.jpg" onclick="handleImage(this)">
+                <img src="images/img5.jpg" onclick="handleImage(this)">
             </div>
         </div>
         <div class="right">
-            <h1>Upholstered Sofa</h1>
+            <h1 class="product-title" style="font-family:Blippo; font-weight: 900;">Upholstered Sofa</h1>
 
-            <h3>Kyara Upholstered Standard Bed by Zipcode Design</h3>
+            <h3 style="width:45%; font-family: Arial, sans-serif; font-size: medium;font-weight: 800;color: grey;">Kyara Upholstered Standard Bed by Zipcode Design</h3>
 
-            <p>Anchor your living room in sophisticated style and impeccable comfort with a single addition. Perfectly
+            <p class="description">Anchor your living room in sophisticated style and impeccable comfort with a single addition. Perfectly
                 balancing wood accents with fabric upholstery.</p>
 
             <div>
@@ -39,14 +39,14 @@
                 <span class="fa fa-star checked"></span>
             </div>
 
-            <p><span id="rating">(5.0)</span> review based on 250</p>
+            <p class="description"><span id="rating">(5.0)</span> review based on 250</p>
 
-            <a href="">Submit Review</a>
+            <a class="description" href="">Submit Review</a>
 
-            <h2>$567</h2>
+            <h2 style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; font-weight: 100;">$567</h2>
 
             <div class="dispatch">
-                <p><span class="far fa-clock"></span> Dispatched in 7 working days</p>
+                <p class="description"><span class="far fa-clock"></span> Dispatched in 7 working days</p>
 
                 <button type="button" id="cart">ADD TO CART</button>
                 <button type="button" id="wishlist">ADD TO WISHLIST</button>
@@ -80,6 +80,9 @@
     <script src="https://kit.fontawesome.com/f7de978a7e.js" crossorigin="anonymous"></script>
 
     <script>
+        function handleImage(img){
+            document.getElementById('display-img').src = img.src;
+        }
     </script>
 </body>
 

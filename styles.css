@@ -14,26 +14,28 @@ img {
 .indicator {
     display: grid;
     grid-template-columns: 18% 18% 18% 18% 18%;
-    grid-gap:10px;
+    grid-gap: 15px;
+    margin-top: 10px;
 }
 
 
+.indicator > img:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
 
 .checked,
 #rating {
-    color: green;
+    color: rgb(35, 211, 158);
 }
 
 a {
     cursor: pointer;
     text-decoration: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(158, 157, 157);
 }
 
-a:active,
-a:visited {
-    color: inherit;
-}
+
 
 .dispatch {
     text-align: center;
@@ -46,17 +48,38 @@ button {
     border-radius: 2px;
 }
 
+
+.description{
+    width:80%; 
+    font-family: Arial, sans-serif; 
+    font-size:medium;
+    font-weight: 600;
+    color: rgb(158, 157, 157);
+}
+
 #cart {
     background-color: #000;
     border: none;
     margin-right: 5px;
     margin-bottom: 5px;
     color: snow;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 #wishlist {
     background: snow;
     border: 1px solid black;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#cart:hover{
+    opacity: 0.8;
+}
+
+#wishlist:hover{
+    opacity: 0.5;
 }
 
 .service {
@@ -71,7 +94,11 @@ button {
 
 .service-text {
     margin-top: -10px;
-    /* padding-left: 30px; */
+    padding-left: 30px;
+    width: 80%;
+    font-family: Arial, sans-serif; 
+    font-weight: 300;
+    color: rgb(158, 157, 157);
 }
 
 @media only screen and (min-width: 500px) {
@@ -115,6 +142,15 @@ button {
         display: grid;
         grid-template-columns: 33.3% 33.3% 33.3%;
         grid-template-rows: 100%;
+        /* justify-content: center; */
+        
+        padding-left: 70px;
+        padding-right: 70px;
+        
+    }
+
+    .product-title{
+        padding-top:40px;
     }
 
     .service {
