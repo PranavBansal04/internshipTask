@@ -5,7 +5,7 @@
     <!-- Required meta tags always come first -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  
+
 
     <link rel="stylesheet" href="./styles.css">
     <title>Upholstered Sofa</title>
@@ -15,20 +15,26 @@
     <div class="row1">
         <div class="left">
             <img id="display-img" src="images/img1.jpg">
+                <div class="fas fa-chevron-circle-left icon-left" onclick="nextImage(-1)"></div>
+                <div class="fas fa-chevron-circle-right icon-right" onclick="nextImage(+1)"></div>
+            </img>
+
             <div class="indicator">
-                <img src="images/img1.jpg" onclick="handleImage(this)">
-                <img src="images/img2.jpg" onclick="handleImage(this)">
-                <img src="images/img3.jpg" onclick="handleImage(this)">
-                <img src="images/img4.jpg" onclick="handleImage(this)">
-                <img src="images/img5.jpg" onclick="handleImage(this)">
+                <img class="thumb" src="images/img1.jpg" onclick="handleImage(this)">
+                <img class="thumb" src="images/img2.jpg" onclick="handleImage(this)">
+                <img class="thumb" src="images/img3.jpg" onclick="handleImage(this)">
+                <img class="thumb" src="images/img4.jpg" onclick="handleImage(this)">
+                <img class="thumb" src="images/img5.jpg" onclick="handleImage(this)">
             </div>
         </div>
         <div class="right">
             <h1 class="product-title" style="font-family:Blippo; font-weight: 900;">Upholstered Sofa</h1>
 
-            <h3 style="width:45%; font-family: Arial, sans-serif; font-size: medium;font-weight: 800;color: grey;">Kyara Upholstered Standard Bed by Zipcode Design</h3>
+            <h3 style="width:45%; font-family: Arial, sans-serif; font-size: medium;font-weight: 800;color: grey;">Kyara
+                Upholstered Standard Bed by Zipcode Design</h3>
 
-            <p class="description">Anchor your living room in sophisticated style and impeccable comfort with a single addition. Perfectly
+            <p class="description">Anchor your living room in sophisticated style and impeccable comfort with a single
+                addition. Perfectly
                 balancing wood accents with fabric upholstery.</p>
 
             <div>
@@ -48,8 +54,8 @@
             <div class="dispatch">
                 <p class="description"><span class="far fa-clock"></span> Dispatched in 7 working days</p>
 
-                <button type="button" id="cart">ADD TO CART</button>
-                <button type="button" id="wishlist">ADD TO WISHLIST</button>
+                <button type="button" id="cart" class="btn">ADD TO CART</button>
+                <button type="button" id="wishlist" class="btn">ADD TO WISHLIST</button>
             </div>
         </div>
     </div>
@@ -71,18 +77,31 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+
     <script src="https://kit.fontawesome.com/f7de978a7e.js" crossorigin="anonymous"></script>
 
     <script>
-        function handleImage(img){
+        function handleImage(img) {
             document.getElementById('display-img').src = img.src;
+            document.getElementById('display-img').index = img.index;
         }
+
+        function nextImage(num) {
+            var curr = document.getElementById('display-img');
+            var imgArray = document.getElementsByClassName("thumb");
+
+            for (i = 0; i < imgArray.length; i++) {
+                if (imgArray[i].src == curr.src) {
+                    temp = (i + num) % (imgArray.length);
+                    if (temp < 0) {
+                        temp = imgArray.length - 1;
+                    }
+                    curr.src = imgArray[temp].src;
+                    break;
+                }
+            }
+        }
+
     </script>
 </body>
 

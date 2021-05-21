@@ -3,6 +3,10 @@ body {
     background: snow;
 }
 
+.row1 {
+    position: relative;
+}
+
 .left {
     width: 100%;
 }
@@ -35,19 +39,32 @@ a {
     border-bottom: 1px solid rgb(158, 157, 157);
 }
 
-
-
 .dispatch {
     text-align: center;
 }
 
-button {
+.btn {
     padding: 15px 34px;
     font-size: 0.7em;
     cursor: pointer;
     border-radius: 2px;
 }
 
+.icon-left{
+    position: absolute;
+    top: 30vw;
+    left: 10vw;
+    font-size: 4vw;
+    color: white;
+}
+
+.icon-right{
+    position: absolute;
+    top: 30vw;
+    left: 62vw;
+    font-size: 4vw;
+    color: white;
+}
 
 .description{
     width:80%; 
@@ -159,5 +176,21 @@ button {
 
     .dispatch {
         text-align: left;
+    }
+
+    .icon-left{
+        position: absolute;
+        top: 15vw;
+        left: 5vw;
+        font-size: 2vw;
+        /* color: white; */
+    }
+    
+    .icon-right{
+        position: absolute;
+        top: 15vw;
+        left: 31vw;
+        font-size: 2vw;
+        /* color: white; */
     }
 }
